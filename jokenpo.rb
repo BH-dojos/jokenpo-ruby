@@ -6,19 +6,15 @@ class Jokenpo
   DRAW = "draw"
 
   def winner(first_hand, second_hand)
-    winner = nil
-    
     if first_hand == ROCK
       if second_hand == PAPER
-        winner = PAPER
+        PAPER
       elsif second_hand == SCISSORS
-        winner = ROCK
+        ROCK
       else
-        winner = DRAW
+        DRAW
       end
-
     end
-    winner
   end
 
 end
