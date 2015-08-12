@@ -4,11 +4,20 @@ require_relative '../jokenpo'
 
 describe Jokenpo do
   subject { Jokenpo.new }
+  
+  context "rock" do
+    it "beats scissors" do
+      scissors = "scissors"
+      rock = "rock"
+      winner = subject.winner rock, scissors
+      expect(winner).to eq rock
+    end
 
-  it "should determine winner based on the input" do
-    scissors = "scissors"
-    rock = "rock"
-    winner = subject.winner scissors, rock
-    expect(winner).to eq rock
+    it "loses to paper" do
+      paper = "paper"
+      rock = "rock"
+      winner = subject.winner rock, paper
+      expect(winner).to eq paper
+    end
   end
 end
