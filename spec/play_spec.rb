@@ -10,17 +10,20 @@ describe Play do
     before do
       subject.name = "rock"
       subject.win = "scissors"
+      subject.lose = "paper"
     end
 
     it "wins" do
-      expect(subject.combat "scissors").to eq "rock"
+      expect(subject.combat "scissors").to eq "win"
     end
 
     it "draws" do
       expect(subject.combat "rock").to eq "draw"
     end
 
-
+    it "lose" do
+      expect(subject.combat "paper").to eq "lose"
+    end
   end
 
 end 
