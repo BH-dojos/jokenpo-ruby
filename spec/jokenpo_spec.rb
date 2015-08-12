@@ -26,4 +26,11 @@ describe Jokenpo do
       expect(subject.winner(rock, rock)).to eq draw
     end
   end
+
+  context "paper" do
+    it "beats rock" do
+      winner = subject.winner paper, rock
+      expect(winner).to eq paper
+    end
+  end
 end

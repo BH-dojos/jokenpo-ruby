@@ -14,6 +14,10 @@ class Jokenpo
       else
         DRAW
       end
+    elsif first_hand == PAPER
+      if second_hand == ROCK
+        PAPER
+      end
     end
   end
 
