@@ -7,21 +7,18 @@ describe Rock do
 
   subject { Rock.new }
 
-  
-  context "rock" do 
-    xit "beats scissors" do
-      winner = subject.winner rock, scissors
-      expect(winner).to eq rock
-    end
+  it "beats scissors" do
+    winner = subject.winner scissors
+    expect(winner).to eq "rock"
+  end
 
-    xit "loses to paper" do
-      winner = subject.winner rock, paper
-      expect(winner).to eq paper
-    end
+  xit "loses to paper" do
+    winner = subject.winner rock, paper
+    expect(winner).to eq paper
+  end
 
-    it "draws" do
-      expect(subject.winner(subject)).to eq "draw"
-    end
+  it "draws" do
+    expect(subject.winner(subject)).to eq "draw"
   end
 
 end

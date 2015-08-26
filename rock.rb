@@ -1,3 +1,4 @@
+require_relative './scissors'
 class Rock
 
 	ROCK = "rock"
@@ -8,7 +9,11 @@ class Rock
 	def winner(other_hand)
 
 		if other_hand.instance_of? Rock
-			DRAW
+			return DRAW
+		end
+
+		if other_hand.instance_of? Scissors
+			return ROCK
 		end
 	end
 end
