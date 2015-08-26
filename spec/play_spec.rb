@@ -4,14 +4,9 @@ require_relative '../play'
 
 describe Play do 
 
-  subject { Play.new }
+  subject { Play.new(name: "rock", win: "scissors", lose: "paper") }
 
   context "rock" do
-    before do
-      subject.name = "rock"
-      subject.win = "scissors"
-      subject.lose = "paper"
-    end
 
     it "wins" do
       expect(subject.combat "scissors").to eq "win"

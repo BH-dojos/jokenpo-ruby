@@ -1,7 +1,12 @@
 class Play
 
-  attr_accessor :name, :win, :lose
+  attr_reader :name, :win, :lose
 
+  def initialize(args = {})
+    @name = args[:name]
+    @win = args[:win]
+    @lose = args[:lose]
+  end
 
   def combat(play)
     if play == win
