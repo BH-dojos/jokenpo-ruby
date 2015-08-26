@@ -1,9 +1,11 @@
 require 'spec_helper.rb'
 require_relative '../rock'
 require_relative '../scissors'
+require_relative '../paper'
 
 describe Rock do
 	let (:scissors){ Scissors.new }
+	let (:paper){ Paper.new }
 
   subject { Rock.new }
 
@@ -12,9 +14,9 @@ describe Rock do
     expect(winner).to eq "rock"
   end
 
-  xit "loses to paper" do
-    winner = subject.winner rock, paper
-    expect(winner).to eq paper
+  it "loses to paper" do
+    winner = subject.winner paper
+    expect(winner).to eq "paper"
   end
 
   it "draws" do
