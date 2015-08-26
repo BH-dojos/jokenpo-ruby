@@ -7,8 +7,6 @@ describe Rock do
 	let (:scissors){ Scissors.new }
 	let (:paper){ Paper.new }
 
-  subject { Rock.new }
-
   it "beats scissors" do
     winner = subject.winner scissors
     expect(winner).to eq :rock
