@@ -7,7 +7,6 @@ describe Play do
   subject { Play.new(name: "rock", win: "scissors", lose: "paper") }
 
   context "rock" do
-
     it "wins" do
       expect(subject.combat "scissors").to eq "win"
     end
@@ -20,5 +19,4 @@ describe Play do
       expect(subject.combat "paper").to eq "lose"
     end
   end
-
 end 
