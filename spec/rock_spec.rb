@@ -21,4 +21,11 @@ describe Rock do
     expect(subject.winner(subject)).to eq :draw
   end
 
+  it "checks if it is rock" do
+    expect(subject.is(:rock)).to be true
+  end
+
+  it "checks if it is not rock" do
+    expect(subject.is(:paper)).to be false
+  end
 end

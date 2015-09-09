@@ -13,9 +13,13 @@ class Rock
 			return :rock
 		end
 
-		if other_hand.instance_of? Paper
+		if other_hand.is :paper
 			return :paper
 		end
 
 	end
+
+    def is(type)
+    	:rock == type
+  	end
 end
