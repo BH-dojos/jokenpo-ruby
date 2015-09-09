@@ -5,11 +5,11 @@ class Rock
 
     def winner(other_hand)
 
-        if other_hand.instance_of? Rock
+        if other_hand.is :rock
             return :draw
         end
 
-        if other_hand.instance_of? Scissors
+        if other_hand.is :scissors
             return :rock
         end
 
