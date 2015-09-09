@@ -3,9 +3,16 @@ require_relative '../scissors'
 
 describe Scissors do
 	let(:paper) { Paper.new }
+	let(:rock) { Rock.new }
 	
 	it "draws with scissors" do
     expect(subject.winner(subject)).to eq :draw
+  end
+
+
+  it "loses to rock" do
+    winner = subject.winner rock
+    expect(winner).to eq :rock
   end
 
   it "beats paper" do
