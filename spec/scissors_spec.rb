@@ -12,4 +12,12 @@ describe Scissors do
     winner = subject.winner paper
     expect(winner).to eq :scissors
   end
+
+  it "checks if it is scissors" do
+    expect(subject.is(:scissors)).to be true
+  end
+
+  it "checks if it is not scissors" do
+    expect(subject.is(:paper)).to be false
+  end
 end
