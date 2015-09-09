@@ -5,7 +5,7 @@ class Jokenpo
   SCISSORS = "scissors"
   DRAW = "draw"
 
-  def winner(first_hand, second_hand)
+  def result(first_hand, second_hand)
     if first_hand == ROCK
       if second_hand == PAPER
         PAPER

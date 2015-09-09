@@ -8,17 +8,17 @@ describe Rock do
 	let (:paper){ Paper.new }
 
   it "beats scissors" do
-    winner = subject.winner scissors
-    expect(winner).to eq :rock
+    winner = subject.result scissors
+    expect(winner).to eq :wins
   end
 
   it "loses to paper" do
-    winner = subject.winner paper
-    expect(winner).to eq :paper
+    winner = subject.result paper
+    expect(winner).to eq :loses
   end
 
   it "draws with rock" do
-    expect(subject.winner(subject)).to eq :draw
+    expect(subject.result(subject)).to eq :draw
   end
 
   it "checks if it is rock" do

@@ -3,18 +3,18 @@ class Paper
 		:paper == type
 	end
 
-	def winner(other_hand)
+	def result(other_hand)
 
 		if other_hand.is :paper
 			return :draw
 		end        
 
 		if other_hand.is :rock
-			return :paper
+			return :wins
 		end
 
 		if other_hand.is :scissors
-			return :scissors
+			return :loses
 		end        
 
 	end

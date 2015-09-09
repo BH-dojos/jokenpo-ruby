@@ -13,23 +13,23 @@ describe Jokenpo do
   
   context "rock" do
     it "beats scissors" do
-      winner = subject.winner rock, scissors
+      winner = subject.result rock, scissors
       expect(winner).to eq rock
     end
 
     it "loses to paper" do
-      winner = subject.winner rock, paper
+      winner = subject.result rock, paper
       expect(winner).to eq paper
     end
 
     it "draws" do
-      expect(subject.winner(rock, rock)).to eq draw
+      expect(subject.result(rock, rock)).to eq draw
     end
   end
 
   context "paper" do
     it "beats rock" do
-      winner = subject.winner paper, rock
+      winner = subject.result paper, rock
       expect(winner).to eq paper
     end
   end

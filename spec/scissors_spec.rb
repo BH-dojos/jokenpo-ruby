@@ -6,18 +6,17 @@ describe Scissors do
 	let(:rock) { Rock.new }
 	
 	it "draws with scissors" do
-    expect(subject.winner(subject)).to eq :draw
+    expect(subject.result(subject)).to eq :draw
   end
 
-
   it "loses to rock" do
-    winner = subject.winner rock
-    expect(winner).to eq :rock
+    winner = subject.result rock
+    expect(winner).to eq :loses
   end
 
   it "beats paper" do
-    winner = subject.winner paper
-    expect(winner).to eq :scissors
+    winner = subject.result paper
+    expect(winner).to eq :wins
   end
 
   it "checks if it is scissors" do
@@ -26,5 +25,9 @@ describe Scissors do
 
   it "checks if it is not scissors" do
     expect(subject.is(:paper)).to be false
+  end
+
+  it "converts to symbol" do
+    expect(subject.to_sym).to be :scissors
   end
 end

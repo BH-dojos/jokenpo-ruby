@@ -3,18 +3,23 @@ require_relative './paper'
 
 class Rock
 
-    def winner(other_hand)
+    def result(other_hand)
+        hands = {
+            rock: :draw,
+            scissors: :wins,
+            paper: :loses
+        }
 
         if other_hand.is :rock
             return :draw
         end
 
         if other_hand.is :scissors
-            return :rock
+            return :wins
         end
 
         if other_hand.is :paper
-            return :paper
+            return :loses
         end
 
     end

@@ -1,8 +1,8 @@
 class Scissors
-  def winner(other_hand)
+  def result(other_hand)
 
         if other_hand.is :rock
-            return :rock
+            return :loses
         end
 
         if other_hand.is :scissors
@@ -10,7 +10,7 @@ class Scissors
         end
 
         if other_hand.is :paper
-            return :scissors
+            return :wins
         end
 
     end
@@ -20,5 +20,8 @@ class Scissors
     :scissors == type
   end
 
+  def to_sym
+    :scissors
+  end
 
 end

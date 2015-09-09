@@ -15,18 +15,18 @@ describe Paper do
     expect(subject.is(:rock)).to be false
   end
    
-   it "beats rock" do
-    winner = subject.winner rock
-    expect(winner).to eq :paper
+  it "beats rock" do
+    winner = subject.result rock
+    expect(winner).to eq :wins
   end
   
    it "loses scissors" do
-    winner = subject.winner scissors
-    expect(winner).to eq :scissors
+    winner = subject.result scissors
+    expect(winner).to eq :loses
   end
 
   it "draw with paper" do
-    winner = subject.winner paper
+    winner = subject.result paper
     expect(winner).to eq :draw
   end
 
