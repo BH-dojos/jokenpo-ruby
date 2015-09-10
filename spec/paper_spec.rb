@@ -30,5 +30,7 @@ describe Paper do
     expect(winner).to eq :draw
   end
 
-
+  it "converts to symbol" do
+    expect(subject.to_sym).to be :paper
+  end
 end

@@ -1,7 +1,10 @@
 class Scissors
+  def is(type)
+    :scissors == type
+  end
+  
   def result(other_hand)
-
-        if other_hand.is :rock
+      if other_hand.is :rock
             return :loses
         end
 
@@ -14,11 +17,6 @@ class Scissors
         end
 
     end
-
-
-  def is(type)
-    :scissors == type
-  end
 
   def to_sym
     :scissors

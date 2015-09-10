@@ -28,4 +28,8 @@ describe Rock do
   it "checks if it is not rock" do
     expect(subject.is(:paper)).to be false
   end
+
+  it "converts to symbol" do
+    expect(subject.to_sym).to be :rock
+  end
 end

@@ -3,28 +3,21 @@ require_relative './paper'
 
 class Rock
 
+    def is(type)
+        :rock == type
+    end
+
     def result(other_hand)
         hands = {
             rock: :draw,
             scissors: :wins,
             paper: :loses
         }
-
-        if other_hand.is :rock
-            return :draw
-        end
-
-        if other_hand.is :scissors
-            return :wins
-        end
-
-        if other_hand.is :paper
-            return :loses
-        end
-
+        
+        hands[other_hand.to_sym]
     end
 
-    def is(type)
-        :rock == type
+    def to_sym
+        :rock
     end
 end

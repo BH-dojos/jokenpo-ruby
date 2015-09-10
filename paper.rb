@@ -19,4 +19,7 @@ class Paper
 
 	end
 
+    def to_sym
+        :paper
+    end
 end
