@@ -4,19 +4,14 @@ class Scissors
   end
   
   def result(other_hand)
-      if other_hand.is :rock
-            return :loses
-        end
-
-        if other_hand.is :scissors
-            return :draw
-        end
-
-        if other_hand.is :paper
-            return :wins
-        end
-
-    end
+    hands = {
+        rock: :loses,
+        scissors: :draw,
+        paper: :wins
+    }
+    
+    hands[other_hand.to_sym]
+  end
 
   def to_sym
     :scissors
